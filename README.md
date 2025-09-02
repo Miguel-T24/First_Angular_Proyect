@@ -31,3 +31,8 @@ npm install tailwindcss @tailwindcss/postcss postcss
 ```
 @import "tailwindcss";
 ```
+
+## 4. Crear un componente en angular
+``` bash
+ng g c <nombre-componente>
+```
