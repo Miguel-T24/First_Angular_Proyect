@@ -1,13 +1,16 @@
 import { Component, signal } from '@angular/core';
 // import { RouterOutlet } from '@angular/router';
+import {FormsModule} from '@angular/forms';
 import { Card } from "./card/card";
 
 @Component({
   selector: 'app-root',
-  imports: [Card],
+  standalone:true,
+  imports: [FormsModule],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
+
 export class App {
   protected readonly title = signal('first_angular_proyect');
 
@@ -20,7 +23,7 @@ export class App {
   // Variables para los ejercicios de binding
   username = "Angular Student";
 
-  // Habilitar o desabiulitar un boton con binging
+    // Habilitar o desabiulitar un boton con binging
   isDisable = false;
   onClick(){
   console.log("Boton Click");
@@ -74,5 +77,14 @@ export class App {
     }
     
   }
+
+  // Two way Binding
+  // Para usar Two way binding hay que importar ngModel que viene en el modulo FormsModule
+  name_twb = "Juan";
+  age_twb = 20;
+  isActive_twb = true;
+  color_twb = 'rojo';
+  colors_twb = ['rojo', 'verde', 'azul']
+
 }
 

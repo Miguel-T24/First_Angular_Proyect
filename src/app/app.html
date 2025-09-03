@@ -1,5 +1,9 @@
 <h1 class="text-4xl text-purple-600 font-bold">¡Tailwind funcionando!</h1>
-<app-card></app-card>
+<!-- <app-card></app-card> -->
+
+
+
+
 
 <!-- Interpolacion -->
 <h1>{{title()}}</h1>
@@ -100,3 +104,36 @@ transition"
     <li>{{ task }}</li>
   }
 </ul>
+
+
+
+<!-- Two Way Binding -->
+<!-- 1) Texto -->
+<label>Nombre en el two way binding: </label>
+<input type="text" [(ngModel)]="name_twb">
+<p>Hola, {{ name_twb }} 👋</p>
+
+<!-- 2) Número + botones -->
+<label>Edad:</label>
+<input type="number" [(ngModel)]="age_twb">
+<button (click)="age_twb = age_twb + 1">+</button>
+<button (click)="age_twb = age_twb - 1">-</button>
+<p>Edad actual: {{ age_twb }}</p>
+
+<!-- 3) Checkbox -->
+<label>
+  <input type="checkbox" [(ngModel)]="isActive_twb">
+  ¿Activo?
+</label>
+<p>Estado: {{ isActive_twb ? 'Activo ✅' : 'Inactivo ❌' }}</p>
+
+<!-- 4) Select -->
+<label>Color favorito:</label>
+<select [(ngModel)]="color_twb">
+  @for (c of colors_twb; track c) {
+    <option [value]="c">{{ c }}</option>
+  } @empty {
+    <option disabled selected>No hay colores</option>
+  }
+</select>
+<p>Elegiste: {{ color_twb }}</p>
