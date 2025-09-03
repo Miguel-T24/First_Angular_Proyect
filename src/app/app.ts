@@ -40,4 +40,39 @@ export class App {
     "https://m.media-amazon.com/images/M/MV5BMjA5NzU2MDYzMF5BMl5BanBnXkFtZTcwODIzNDc3Mw@@._V1_.jpg",
     "https://m.media-amazon.com/images/M/MV5BMTk0NjcxOTE1MF5BMl5BanBnXkFtZTYwMjc0NTg3._V1_.jpg"
   ];
+
+  // Event Binding
+
+  // Mostrar Texto en Pantalla
+  message = "";
+  showMessage(){
+    this.message = "Hola Angular";
+  }
+
+  // Capturar valor de un input
+  inputValue = "";
+  onInput(event: Event) {
+    this.inputValue = (event.target as HTMLInputElement).value;
+  }
+
+  // Contador
+  counter = 0;
+  increment(){
+    this.counter++
+  }
+  decrement(){
+    this.counter > 0 && this.counter--
+  }
+
+  // Un Mini to do App
+
+  tasks: string[] = [];
+
+  addTask(task: string) {
+    if (task.trim() !== "") {
+      this.tasks.push(task);
+    }
+    
+  }
 }
+

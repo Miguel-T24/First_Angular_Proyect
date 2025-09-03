@@ -14,7 +14,7 @@
 <br>
 <br>
 
-<!-- Ejercicios de Binding -->
+<!-- Ejercicios de Property Binding gBinding -->
 <!-- Mostrando nombre por input con binding -->
 <input [value] = "username">
 
@@ -40,3 +40,63 @@ transition"
         <img [src]="img" alt="Imagen {{$index}}" width="500">
     }
 </div>
+
+<!-- Event Binding -->
+<!-- Al presionar click se haga una accion -->
+<button 
+class="mt-4 px-4 py-2 bg-red-500 text-white rounded-lg hover:bg-blue-600 
+transition"
+(click)="onClick()"
+>Haz Click</button>
+
+<!-- mostrar texto en pantalla -->
+<p>{{message}}</p>
+<button 
+class="mt-4 px-4 py-2 bg-yellow-500 text-white rounded-lg hover:bg-blue-600 
+transition"
+(click)="showMessage()"
+>Haz Click</button>
+
+<br>
+<!-- Capturar valor de un input -->
+ <!-- En tiempo real esta viendo lo que se va escribiendo -->
+<input (input)="onInput($event)" placeholder="Escribe algo...">
+<p>{{ inputValue }}</p>
+
+
+<br>
+<br>
+
+<!-- Contador -->
+<h2 class = "text-black">{{counter}}</h2>
+<button
+ class="mt-4 px-4 py-2 bg-yellow-500 text-white rounded-lg hover:bg-blue-600 
+transition" 
+(click)="increment()"
+>Incrementar</button>
+
+<button
+ class="mt-4 px-4 py-2 bg-yellow-500 text-white rounded-lg hover:bg-blue-600 
+transition" 
+(click)="decrement()"
+>Decrementar</button>
+
+<!--  Mini To do App -->
+<h2 class="text-xl font-bold">Mini ToDo App</h2>
+
+<!-- Input + Botón -->
+<input #taskInput type="text" placeholder="Escribe una tarea"
+  class="border rounded px-2 py-1">
+<button 
+  (click)="addTask(taskInput.value)" 
+  class="ml-2 px-4 py-1 bg-green-600 text-white rounded hover:bg-green-700"
+>
+  Agregar
+</button>
+
+<!-- Lista de tareas -->
+<ul class="mt-4 list-disc list-inside">
+  @for (task of tasks; track $index) {
+    <li>{{ task }}</li>
+  }
+</ul>
