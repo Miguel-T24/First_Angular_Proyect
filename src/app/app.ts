@@ -10,4 +10,10 @@ import { Card } from "./card/card";
 })
 export class App {
   protected readonly title = signal('first_angular_proyect');
+
+  name = "Miguel";
+  apellido = "Tamayo";
+  age = 29;
+
+  isActive = true
 }
