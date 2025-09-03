@@ -1,6 +1,42 @@
 <h1 class="text-4xl text-purple-600 font-bold">¡Tailwind funcionando!</h1>
+<app-card></app-card>
+
+<!-- Interpolacion -->
 <h1>{{title()}}</h1>
 <h2>Mi nombre es {{name}} y mi apellido es {{apellido}} y tengo {{age}} años</h2>
 <h2>En 5 años tendré {{age + 5 }} años</h2>
-<h2>{{isActive ? "Activo" : "Inactivo"}}</h2>
-<app-card></app-card>
+<h2>Esta activo o no? = {{isActive}}</h2>
+
+<!-- Binding -->
+<input [value]="name">
+<img [src]="imageURL" alt="logo of my life" width="500">
+<br>
+<br>
+<br>
+
+<!-- Ejercicios de Binding -->
+<!-- Mostrando nombre por input con binding -->
+<input [value] = "username">
+
+<!-- Habilitando o Desabilitando un boton con binding -->
+<button 
+[disabled]="isDisable"
+class="mt-4 px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 
+transition"
+(click)="onClick()"
+>Haz Click</button>
+
+<!-- Agregando una imagen -->
+ <img [src]="image2" alt="Imagen random" width="500" height="500">
+
+ <p [style.color]="isRed ? 'red' : 'blue'">Color del Texto</p>
+
+<!-- Clases Dinamicas -->
+<p [class.active]="isActive1">Este es un ejemplo de una clase dinamica</p>
+
+<!-- Mostrar varias imagenes desde un array -->
+<div>
+    @for (img of images; track $index){
+        <img [src]="img" alt="Imagen {{$index}}" width="500">
+    }
+</div>
