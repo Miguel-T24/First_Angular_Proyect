@@ -16,11 +16,11 @@
 
 <!-- Interpolacion -->
 <h1>{{title()}}</h1>
-<h2>Mi nombre es {{name}} y mi apellido es {{apellido}} y tengo {{age}} años</h2>
+<h2>Mi nombre es {{name}} y mi apellido es {{lastName}} y tengo {{age}} años</h2>
 <h2>En 5 años tendré {{age + 5 }} años</h2>
 <h2>Esta activo o no? = {{isActive}}</h2>
 
-<!-- Binding -->
+<!-- Property Binding -->
 <input [value]="name">
 <img [src]="imageURL" alt="logo of my life" width="500">
 <br>
@@ -159,16 +159,9 @@ transition"
 <br>
 <br>
 <app-title-component 
-[title]="'Titulo desde el padre2 3'" 
+[title]="'Titulo desde el Padre'" 
 [content] = "'Contenido desde el Padre'"
 (mensaje)="eventoDelHijo($event)"
 >
 </app-title-component>
 <p>{{mensajedeltitle}}</p>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<h1>Hola mundo</h1>

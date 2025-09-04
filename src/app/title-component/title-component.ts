@@ -12,6 +12,6 @@ export class TitleComponent {
   @Output() mensaje = new EventEmitter<string>();
 
   clickMostrarMensaje(){
-    this.mensaje.emit("Mandando el mensaje desde el hijo");
+    this.mensaje.emit("Mandando el mensaje desde el Hijo");
   }
 }

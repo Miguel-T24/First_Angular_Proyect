@@ -16,9 +16,11 @@ export class App {
   protected readonly title = signal('first_angular_proyect');
 
   name = "Miguel";
-  apellido = "Tamayo";
+  lastName = "Tamayo";
   age = 29;
   isActive = false ? "Activo" : "Inactivo"
+
+  // property Binding
   imageURL = "https://images7.alphacoders.com/133/1338182.png";
 
   // Variables para los ejercicios de binding
@@ -76,7 +78,6 @@ export class App {
     if (task.trim() !== "") {
       this.tasks.push(task);
     }
-    
   }
 
   // Two way Binding
