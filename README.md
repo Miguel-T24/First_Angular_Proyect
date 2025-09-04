@@ -55,7 +55,7 @@ ng g c <nombre-componente>
 
 # 6. Property Binding
 - En el Archivo `.ts`
-``` typeascript
+``` typescript
   name = "Miguel";
   imageURL = "https://images7.alphacoders.com/133/1338182.png";
   

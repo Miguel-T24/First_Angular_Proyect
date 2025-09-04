@@ -118,15 +118,19 @@ transition"
 
 <!-- Two Way Binding -->
 <!-- 1) Texto -->
-<label>Nombre en el two way binding: </label>
+<label>Nombre: </label>
 <input type="text" [(ngModel)]="name_twb">
 <p>Hola, {{ name_twb }} 👋</p>
 
 <!-- 2) Número + botones -->
 <label>Edad:</label>
 <input type="number" [(ngModel)]="age_twb">
-<button (click)="age_twb = age_twb + 1">+</button>
-<button (click)="age_twb = age_twb - 1">-</button>
+<button
+(click) ="age_twb = age_twb + 1"
+>+</button>
+<button
+(click) ="age_twb = age_twb - 1"
+>-</button>
 <p>Edad actual: {{ age_twb }}</p>
 
 <!-- 3) Checkbox -->
