@@ -2,11 +2,12 @@ import { Component, signal } from '@angular/core';
 // import { RouterOutlet } from '@angular/router';
 import {FormsModule} from '@angular/forms';
 import { Card } from "./card/card";
+import { TitleComponent } from './title-component/title-component';
 
 @Component({
   selector: 'app-root',
-  standalone:true,
-  imports: [FormsModule],
+  // standalone:true,
+  imports: [FormsModule,Card,TitleComponent],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
@@ -86,5 +87,18 @@ export class App {
   color_twb = 'rojo';
   colors_twb = ['rojo', 'verde', 'azul']
 
+
+  // @Input()
+  childMessage = '';
+  handleChildEvent(msg: string) {
+    this.childMessage = msg;
+  }
+
+  // Input del segundo ejemplo
+  mensajedeltitle = '';
+  eventoDelHijo(msg: string){
+    this.mensajedeltitle = msg
+  }
+    
 }
 

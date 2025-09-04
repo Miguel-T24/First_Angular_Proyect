@@ -1,9 +1,18 @@
 <h1 class="text-4xl text-purple-600 font-bold">¡Tailwind funcionando!</h1>
-<!-- <app-card></app-card> -->
+<app-card
+[title] = "'Titulo desde el padre'"
+[contenido] = "'Contenido desde el padre'"
+(clicked)="handleChildEvent($event)"
+>
+</app-card>
+<p>Mensaje del hijo: {{childMessage}}</p>
 
 
 
-
+<br>
+<br>
+<br>
+<br>
 
 <!-- Interpolacion -->
 <h1>{{title()}}</h1>
@@ -18,7 +27,7 @@
 <br>
 <br>
 
-<!-- Ejercicios de Property Binding gBinding -->
+<!-- Ejercicios de Property Binding -->
 <!-- Mostrando nombre por input con binding -->
 <input [value] = "username">
 
@@ -137,3 +146,29 @@ transition"
   }
 </select>
 <p>Elegiste: {{ color_twb }}</p>
+
+
+
+<!-- @Input() -->
+<!-- Al final no coloque nada porque use la card que a es arriba-->
+
+<!-- Vamos a hacer ejercicios -->
+<!-- Crear un componente llamado TitleComponent y pasarle un texto a un H1 con Input -->
+<hr>
+<br>
+<br>
+<br>
+<app-title-component 
+[title]="'Titulo desde el padre2 3'" 
+[content] = "'Contenido desde el Padre'"
+(mensaje)="eventoDelHijo($event)"
+>
+</app-title-component>
+<p>{{mensajedeltitle}}</p>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<h1>Hola mundo</h1>
