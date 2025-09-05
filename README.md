@@ -37,7 +37,7 @@ npm install tailwindcss @tailwindcss/postcss postcss
 ng g c <nombre-componente>
 ```
 
-# 5. Interpolacion
+# 5. Interpolación
 - En el archivo `.ts`
 ``` typescript
   name = "Miguel";
@@ -137,7 +137,7 @@ class=""
 <input (input)="onInput($event)" placeholder="Escribe algo...">
 ```
 
-## En este caso haremosm un contador aplicando todo lo que hemos aprenddiod hasta ahora sobre los event binding
+## En este caso haremos un contador aplicando todo lo que hemos aprendido hasta ahora sobre los event binding
 - En el archivo `.ts`
 ``` typescript
   counter = 0;
@@ -196,9 +196,12 @@ class=""
 </ul>
 ```
 
-# 9. Two Way binding
+# 9. Two Way Binding
 - En el archivo `.ts`
+> [!NOTE] Tiene que tener importada la libreria `FormsModels` en el archivo `.ts`
 ``` typescript
+  import {FormsModule} from '@angular/forms';
+
   name_twb = "Juan";
   age_twb = 20;
   isActive_twb = true;
