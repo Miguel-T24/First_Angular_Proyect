@@ -198,7 +198,8 @@ class=""
 
 # 9. Two Way Binding
 - En el archivo `.ts`
-> [!NOTE] Tiene que tener importada la libreria `FormsModels` en el archivo `.ts`
+> [!NOTE]
+> Tiene que tener importada la libreria `FormsModels` en el archivo `.ts`
 ``` typescript
   import {FormsModule} from '@angular/forms';
 
