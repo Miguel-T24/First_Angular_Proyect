@@ -30,7 +30,7 @@ npm install tailwindcss @tailwindcss/postcss postcss
 
 ## 4. Creacion de un Componente
 ``` bash
-ng g c <nombre-componente>
+npx ng g c <nombre-componente>
 ```
 
 > [!NOTE]
