@@ -8,10 +8,6 @@ npx @angular/cli new <nombre del proyecto>
 ``` Bash
 npx ng serve
 ```
-> [!NOTE]
-> Estos son comandos para que se instalen localmente las dependencias.
->
-> Por buenas prácticas no trabajaré con instalaciones globales, solo locales para que sea mas facil manejar varios proyectos con diferentes dependencias.
 
 ## 3. Instalar Taildwindcss
 * Ejecutar el comando en la raiz del proyecto
@@ -36,3 +32,8 @@ npm install tailwindcss @tailwindcss/postcss postcss
 ``` bash
 ng g c <nombre-componente>
 ```
+
+> [!NOTE]
+> Estos son comandos para que se instalen localmente las dependencias.
+>
+> Por buenas prácticas no trabajaré con instalaciones globales, solo locales para que sea mas facil manejar varios proyectos con diferentes dependencias.
